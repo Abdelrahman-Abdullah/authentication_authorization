@@ -23,7 +23,7 @@
                     <h4 class="mb-2">Adventure starts here 🚀</h4>
                     <p class="mb-4">Make your app management easy and fun!</p>
 
-                    <form id="formAuthentication" class="mb-3" action="{{ route('front.register') }}" method="POST">
+                    <form id="formAuthentication" class="mb-3" action="{{ route('register') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             {{-- Name--}}
@@ -61,9 +61,9 @@
                                     aria-describedby="password"
                                 />
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                                <x-input-error :messages="$errors->get('password')" class="mt-2"/>
 
                             </div>
+                                <x-input-error :messages="$errors->get('password')" class="mt-2"/>
                         </div>
 
                         <button class="btn btn-primary d-grid w-100">Sign up</button>
