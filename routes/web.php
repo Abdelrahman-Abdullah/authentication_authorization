@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::prefix('front')->name('front.')->group(function () {
+    Route::get('/', HomePageController::class)->name('home');
+});
 Route::get('/', function () {
     return view('welcome');
 });
