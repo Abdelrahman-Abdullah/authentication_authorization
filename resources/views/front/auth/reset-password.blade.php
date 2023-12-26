@@ -37,7 +37,7 @@
                                 name="email"
                                 placeholder="Enter your email"
                                 autofocus
-                                :value="old('email', $request->email)"
+                                value="{{old('email', $request->email)}}"
                             />
                             <x-input-error :messages="$errors->get('email')" class="mt-2"/>
                         </div>
@@ -56,8 +56,8 @@
                                 />
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
 
-                                <x-input-error :messages="$errors->get('password')" class="mt-2"/>
                             </div>
+                                <x-input-error :messages="$errors->get('password')" class="mt-2"/>
                         </div>
 
                         <!-- Password Confirmation-->
