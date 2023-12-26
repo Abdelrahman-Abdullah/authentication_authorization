@@ -31,9 +31,12 @@
             <!-- Forgot Password -->
             <div class="card">
                 <div class="card-body">
-                    @include('front.partials.logo')
+                    @include('front.partials.logo',['name'=>'Forget Password'])
                     <h4 class="mb-2">Forgot Password? 🔒</h4>
                     <p class="mb-4">Enter your email, and we'll send you instructions to reset your password</p>
+                    <!-- Session Status -->
+                    <x-auth-session-status class="mb-4" :status="session('status')" />
+
                     <form id="formAuthentication" class="mb-3" action="{{route('password.email')}}" method="POST">
                         @csrf
                         <div class="mb-3">
@@ -47,6 +50,8 @@
                                 autofocus
                                 :value="old('email')"
                             />
+
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
                         <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
                     </form>
