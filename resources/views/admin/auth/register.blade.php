@@ -1,4 +1,4 @@
-@section('title', ' Front Register Page')
+@section('title', ' Admin Register Page')
 
     <!DOCTYPE html>
 
@@ -7,10 +7,10 @@
     class="light-style customizer-hide"
     dir="ltr"
     data-theme="theme-default"
-    data-assets-path="{{asset('assets-front')}}/"
+    data-assets-path="{{asset('assets-admin')}}/"
     data-template="vertical-menu-template-free"
 >
-@include('front.partials.authHead')
+@include('admin.partials.authHead')
 <body>
 <!-- Content -->
 <div class="container-xxl">
@@ -19,7 +19,7 @@
             <!-- Register Card -->
             <div class="card">
                 <div class="card-body">
-                    @include('front.partials.logo' , ['name' => 'Register'])
+                    @include('admin.partials.logo' , ['name' => 'Register'])
                     <h4 class="mb-2">Adventure starts here 🚀</h4>
                     <p class="mb-4">Make your app management easy and fun!</p>
 
@@ -82,7 +82,7 @@
 </div>
 <!-- / Content -->
 
-@include('front.partials.authScripts')
+@include('admin.partials.authScripts')
 
 </body>
 </html>

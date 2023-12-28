@@ -1,4 +1,4 @@
-@section('title','Reset Password')
+@section('title','Admin Reset Password')
     <!DOCTYPE html>
 <html
     lang="en"
@@ -8,7 +8,7 @@
     data-assets-path="../assets/"
     data-template="vertical-menu-template-free"
 >
-@include('front.partials.authHead')
+@include('admin.partials.authHead')
 
 <body>
 <!-- Content -->
@@ -19,7 +19,7 @@
             <!-- Forgot Password -->
             <div class="card">
                 <div class="card-body">
-                    @include('front.partials.logo',['name'=>'Forget Password'])
+                    @include('admin.partials.logo',['name'=>'Forget Password'])
                     <h4 class="mb-2">Forgot Password? 🔒</h4>
                     <p class="mb-4">Enter your email, and we'll send you instructions to reset your password</p>
 
@@ -95,6 +95,6 @@
 <!-- / Content -->
 
 
-@include('front.partials.authScripts')
+@include('admin.partials.authScripts')
 </body>
 </html>

@@ -1,4 +1,4 @@
-@section('title',' Front Login Page')
+@section('title',' Admin Login Page')
 <!DOCTYPE html>
 
 <html
@@ -9,7 +9,7 @@
     data-assets-path="../assets/"
     data-template="vertical-menu-template-free"
 >
-@include('front.partials.authHead')
+@include('admin.partials.authHead')
 <body>
 <!-- Content -->
 
@@ -19,7 +19,7 @@
             <!-- Register -->
             <div class="card">
                 <div class="card-body">
-                    @include('front.partials.logo' , ['name' => 'Login'])
+                    @include('admin.partials.logo' , ['name' => 'Login'])
                     <h4 class="mb-2">Welcome to Sneat! 👋</h4>
                     <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
@@ -85,6 +85,6 @@
 
 <!-- / Content -->
 
-@include('front.partials.authScripts')
+@include('admin.partials.authScripts')
 </body>
 </html>
