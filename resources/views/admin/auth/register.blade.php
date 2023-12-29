@@ -23,7 +23,7 @@
                     <h4 class="mb-2">Adventure starts here 🚀</h4>
                     <p class="mb-4">Make your app management easy and fun!</p>
 
-                    <form id="formAuthentication" class="mb-3" action="{{ route('register') }}" method="POST">
+                    <form id="formAuthentication" class="mb-3" action="{{ route('admin.register') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             {{-- Name--}}
@@ -70,7 +70,7 @@
                     </form>
                     <p class="text-center">
                         <span>Already have an account?</span>
-                        <a href="{{route('login')}}">
+                        <a href="{{route('admin.login')}}">
                             <span>Sign in instead</span>
                         </a>
                     </p>
