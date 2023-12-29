@@ -24,11 +24,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $request->authenticate();
+        $request->authenticate('admin');
 
         $request->session()->regenerate();
 
-        return to_route('front.home');
+        return to_route('admin.index');
     }
 
     /**

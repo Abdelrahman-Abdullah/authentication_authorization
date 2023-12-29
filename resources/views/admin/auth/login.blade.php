@@ -26,7 +26,7 @@
                     <!-- Session Status -->
                     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-                    <form id="formAuthentication" class="mb-3" action="{{route('login')}}" method="POST">
+                    <form id="formAuthentication" class="mb-3" action="{{route('admin.login')}}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
@@ -43,7 +43,7 @@
                         <div class="mb-3 form-password-toggle">
                             <div class="d-flex justify-content-between">
                                 <label class="form-label" for="password">Password</label>
-                                <a href="{{route('password.request')}}">
+                                <a href="{{route('admin.password.request')}}">
                                     <small>Forgot Password?</small>
                                 </a>
                             </div>
@@ -72,7 +72,7 @@
 
                     <p class="text-center">
                         <span>New on our platform?</span>
-                        <a href="{{route('register')}}">
+                        <a href="{{route('admin.register')}}">
                             <span>Create an account</span>
                         </a>
                     </p>
