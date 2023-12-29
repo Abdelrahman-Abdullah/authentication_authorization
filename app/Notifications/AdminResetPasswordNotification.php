@@ -36,7 +36,7 @@ class AdminResetPasswordNotification extends Notification
     {
         return (new MailMessage)
                     ->line('You are receiving this email because we received a password reset request for your account.')
-                    ->action('Admin Reset Password', url('/admin/reset-password/',$this->token))
+                    ->action('Admin Reset Password', url('/admin/reset-password',$this->token))
                     ->line('This password reset link will expire in 60 minutes.')
                     ->line('Thank you for using our application!');
     }
