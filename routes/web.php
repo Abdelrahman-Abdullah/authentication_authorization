@@ -28,6 +28,8 @@ require __DIR__.'/auth.php';
 // ADMIN ROUTES
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [HomeController::class,'index'])->middleware('admin')->name('index');
+
+    require __DIR__.'/adminAuth.php';
 });
 
 //Route::get('/dashboard', function () {
