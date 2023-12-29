@@ -92,7 +92,7 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <form action="{{route('logout')}}" method="post">
+                        <form action="{{route('admin.logout')}}" method="post">
                             @csrf
                             {{-- One Way --}}
                             <button class="dropdown-item" type="submit">
